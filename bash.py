@@ -40,27 +40,27 @@ def main():
 
 def test_c1():
     out = subprocess.check_output(c1, shell=True)
-    assert out == b'22\n'
+    assert (out == b'22\n' or out == '22\n')
 
 def test_c2():
     out = subprocess.check_output(c2, shell=True)
-    assert out == b'8\n'
+    assert (out == b'8\n' or out == '8\n')
 
 def test_c3():
     out = subprocess.check_output(c3, shell=True)
-    assert out == b'14\n'
+    assert (out == b'14\n' or out == '14\n')
 
 def test_c4():
     out = subprocess.check_output(c4, shell=True)
-    assert out == b'159\n'
+    assert (out == b'159\n' or out == '159\n')
 
 def test_c5():
     out = subprocess.check_output(c5, shell=True)
-    assert out == b'PIT\nSFN\n'
+    assert (out == b'PIT\nSFN\n' or out == 'PIT\nSFN\n')
 
 def test_c6():
     out = subprocess.check_output(c6, shell=True)
-    assert out == b'1986\n'
+    assert (out == b'1986\n' or out == '1986\n')
     
     
 #run main and check tests    
